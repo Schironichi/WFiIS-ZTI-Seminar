@@ -1,0 +1,4 @@
+.label {
+    -fx-font: normal bold 50px 'serif' ;
+    -fx-text-fill: blue;
+}

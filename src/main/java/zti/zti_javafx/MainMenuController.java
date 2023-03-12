@@ -1,19 +1,10 @@
 package zti.zti_javafx;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 
 import java.io.IOException;
 
 public class MainMenuController {
-    @FXML
-    private Label welcomeText;
-
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
 
     @FXML
     protected void onShapesButtonClick() throws IOException {
@@ -23,5 +14,25 @@ public class MainMenuController {
     @FXML
     public void onUIControlsButtonClick() throws IOException {
         new MainApplication().changeScene("ui-controls-view.fxml");
+    }
+
+    @FXML
+    public void onChartsButtonClick() throws IOException {
+        new MainApplication().changeScene("charts-view.fxml");
+    }
+
+    @FXML
+    public void onWebViewButtonClick() throws IOException {
+        new MainApplication().changeScene("webview-view.fxml");
+    }
+
+    @FXML
+    public void onEventsButtonClick() throws IOException {
+        new MainApplication().changeScene("events-view.fxml");
+    }
+
+    @FXML
+    public void onCSSButtonClick() throws IOException {
+        new MainApplication().changeScene("css-view.fxml");
     }
 }

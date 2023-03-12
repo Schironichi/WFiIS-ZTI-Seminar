@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zti.zti_javafx.WebViewViewController">
+   <children>
+      <Button layoutX="711.0" layoutY="14.0" mnemonicParsing="false" onAction="#onWebViewButtonClick" text="WebView" />
+      <Group fx:id="grp" layoutX="10.0" layoutY="10.0" />
+      <Button layoutX="697.0" layoutY="560.0" mnemonicParsing="false" onAction="#onMainMenuClick" prefHeight="26.0" prefWidth="89.0" text="Main Menu" />
+   </children>
+</AnchorPane>

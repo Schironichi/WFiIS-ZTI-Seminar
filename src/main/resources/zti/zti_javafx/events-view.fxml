@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zti.zti_javafx.EventsViewController">
+   <children>
+      <Button layoutX="697.0" layoutY="560.0" mnemonicParsing="false" onAction="#onMainMenuClick" prefHeight="26.0" prefWidth="89.0" text="Main Menu" />
+      <Button fx:id="btn" layoutX="364.0" layoutY="287.0" mnemonicParsing="false" text="Click Me!" />
+      <Label fx:id="lbl_hover" alignment="CENTER" contentDisplay="CENTER" layoutX="216.0" layoutY="421.0" onMouseEntered="#onHoverEntered" onMouseExited="#onHoverExited" prefHeight="80.0" prefWidth="369.0" text="Hover over me">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Group fx:id="grp" layoutX="337.0" layoutY="114.0">
+         <children>
+            <Label fx:id="lbl_lshift" alignment="CENTER" contentDisplay="CENTER" text="Hold Left Shift">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </Group>
+   </children>
+</AnchorPane>
