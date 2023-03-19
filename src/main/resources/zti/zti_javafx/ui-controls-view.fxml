@@ -13,23 +13,43 @@
 <?import javafx.scene.control.ScrollBar?>
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.TilePane?>
 <?import javafx.scene.layout.VBox?>
-
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zti.zti_javafx.UiControlsViewController">
    <children>
-      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="349.0" spacing="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+      <VBox alignment="CENTER" layoutX="226.0" layoutY="20.0" prefHeight="600.0" prefWidth="349.0" spacing="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="226.0" AnchorPane.topAnchor="20.0">
          <children>
-            <Button mnemonicParsing="false" text="Button" />
+            <Button mnemonicParsing="false" onAction="#onButtonClick" text="Button" />
             <Label text="Label" />
             <TextField />
-            <ProgressBar prefWidth="200.0" progress="0.0" />
-            <RadioButton mnemonicParsing="false" text="RadioButton" />
-            <RadioButton mnemonicParsing="false" text="RadioButton" />
+            <ProgressBar fx:id="pbar" prefWidth="200.0" progress="0.0" />
+            <TilePane alignment="TOP_CENTER" orientation="VERTICAL" prefHeight="80.0" prefWidth="295.0" vgap="10.0">
+               <children>
+                  <RadioButton lineSpacing="10.0" mnemonicParsing="false" selected="true" text="Option 1">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="tg" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton mnemonicParsing="false" text="Option 2" toggleGroup="$tg" />
+               </children>
+            </TilePane>
             <CheckBox mnemonicParsing="false" text="CheckBox" />
-            <Slider />
-            <ScrollBar />
+            <HBox>
+               <children>
+                  <Slider fx:id="sldr" blockIncrement="1.0" minorTickCount="4" prefHeight="16.0" prefWidth="300.0" showTickLabels="true" showTickMarks="true" />
+                  <Label fx:id="sliderLabel" alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="50.0" text="0" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <ScrollBar fx:id="scbr" blockIncrement="1.0" prefHeight="15.0" prefWidth="300.0" visibleAmount="10.0" />
+                  <Label fx:id="sliderBarLabel" alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="50.0" text="0" textAlignment="RIGHT" />
+               </children>
+            </HBox>
             <PasswordField />
             <MenuButton mnemonicParsing="false" text="MenuButton">
               <items>

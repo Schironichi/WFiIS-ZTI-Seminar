@@ -3,22 +3,29 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="543.0" prefWidth="800.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="zti.zti_javafx.MainMenuController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-    </padding>
-   <Label text="ZTI Demonstracje" textAlignment="CENTER">
-      <font>
-         <Font size="40.0" />
-      </font>
-   </Label>
-   <Button mnemonicParsing="false" onAction="#onShapesButtonClick" text="Shapes" />
-   <Button mnemonicParsing="false" onAction="#onUIControlsButtonClick" text="UI Controls" textAlignment="CENTER" />
-   <Button mnemonicParsing="false" onAction="#onChartsButtonClick" text="Charts" textAlignment="CENTER" />
-   <Button mnemonicParsing="false" onAction="#onWebViewButtonClick" text="WebView" textAlignment="CENTER" />
-   <Button mnemonicParsing="false" onAction="#onEventsButtonClick" text="Events" textAlignment="CENTER" />
-   <Button mnemonicParsing="false" onAction="#onCSSButtonClick" text="CSS" textAlignment="CENTER" />
-</VBox>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zti.zti_javafx.MainMenuController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="800.0" spacing="30.0">
+          <padding>
+              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+          </padding>
+         <Label text="Interfejs graficzny (GUI) w JavaFX" textAlignment="CENTER">
+            <font>
+               <Font size="40.0" />
+            </font>
+         </Label>
+         <Button maxHeight="50.0" maxWidth="300.0" mnemonicParsing="false" onAction="#onShapes2DButtonClick" prefHeight="40.0" text="Shapes 2D" />
+         <Button maxHeight="50.0" maxWidth="300.0" mnemonicParsing="false" onAction="#onShapes3DButtonClick" prefHeight="40.0" text="Shapes 3D" />
+         <Button maxHeight="50.0" maxWidth="300.0" mnemonicParsing="false" onAction="#onUIControlsButtonClick" prefHeight="40.0" text="UI Controls" textAlignment="CENTER" />
+         <Button maxHeight="50.0" maxWidth="300.0" mnemonicParsing="false" onAction="#onChartsButtonClick" prefHeight="40.0" text="Charts" textAlignment="CENTER" />
+         <Button maxHeight="50.0" maxWidth="300.0" mnemonicParsing="false" onAction="#onWebViewButtonClick" prefHeight="40.0" text="WebView" textAlignment="CENTER" />
+         <Button maxHeight="50.0" maxWidth="300.0" mnemonicParsing="false" onAction="#onEventsButtonClick" prefHeight="40.0" text="Events" textAlignment="CENTER" />
+         <Button maxHeight="50.0" maxWidth="300.0" mnemonicParsing="false" onAction="#onCSSButtonClick" prefHeight="40.0" text="CSS" textAlignment="CENTER" />
+      </VBox>
+   </children>
+</AnchorPane>

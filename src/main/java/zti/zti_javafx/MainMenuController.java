@@ -5,10 +5,14 @@ import javafx.fxml.FXML;
 import java.io.IOException;
 
 public class MainMenuController {
+    @FXML
+    public void onShapes2DButtonClick() throws IOException {
+        new MainApplication().changeScene("shapes-2d-view.fxml");
+    }
 
     @FXML
-    protected void onShapesButtonClick() throws IOException {
-        new MainApplication().changeScene("shapes-2d-view.fxml");
+    public void onShapes3DButtonClick() throws IOException {
+        new MainApplication().changeScene("shapes-3d-view.fxml");
     }
 
     @FXML

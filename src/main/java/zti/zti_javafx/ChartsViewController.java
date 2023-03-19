@@ -23,38 +23,39 @@ public class ChartsViewController extends Functions {
         PieChart pieChart = new PieChart(pieChartData);
         pieChart.setPrefWidth(350);
         pieChart.setPrefHeight(400);
-        //Setting the title of the Pie chart
-        pieChart.setTitle("Example Data");
+        pieChart.setTitle("PieChart Example");
 
-        //setting the direction to arrange the data
+        // Chart Direction
         pieChart.setClockwise(true);
 
-        //Setting the length of the label line
+        // Label Line length
         pieChart.setLabelLineLength(10);
 
-        //Setting the labels of the pie chart visible
+        // Labels visibility
         pieChart.setLabelsVisible(true);
 
-        //Setting the start angle of the pie chart
+        // Chart starting angle
         pieChart.setStartAngle(180);
 
         grp.getChildren().add(pieChart);
 
-        //Defining the x axis
+        // BarChart
+        // X definition
         CategoryAxis xAxis = new CategoryAxis();
 
         xAxis.setCategories(FXCollections.<String>observableArrayList(Arrays.asList(
                 "Sales", "Promos", "Users")));
         xAxis.setLabel("Type");
 
-        //Defining the y axis
+        // Y definition
         NumberAxis yAxis = new NumberAxis();
         yAxis.setLabel("Score");
 
-        //Creating the Bar chart
+        // Bar chart creation
         BarChart<String, Number> barChart = new BarChart<>(xAxis, yAxis);
-        barChart.setTitle("Phone Comparison");
+        barChart.setTitle("BarChart Example");
 
+        // Data preparation
         XYChart.Series<String, Number> ser1 = new XYChart.Series<>();
         ser1.setName("Nokia");
         ser1.getData().add(new XYChart.Data<>("Sales", 21));
@@ -73,8 +74,10 @@ public class ChartsViewController extends Functions {
         ser3.getData().add(new XYChart.Data<>("Promos", 6));
         ser3.getData().add(new XYChart.Data<>("Users", 2));
 
-        //Setting the data to bar chart
+        // Data insert
         barChart.getData().addAll(ser1, ser2, ser3);
+
+        // Chart drawing and size/position settings
         barChart.setPrefWidth(350);
         barChart.setPrefHeight(400);
         barChart.setTranslateX(360);

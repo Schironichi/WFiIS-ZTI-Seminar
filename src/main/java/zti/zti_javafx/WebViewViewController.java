@@ -11,11 +11,8 @@ public class WebViewViewController extends Functions {
     Group grp;
 
     public void onWebViewButtonClick(ActionEvent actionEvent) {
-        // create a webview object
         WebView w = new WebView();
-        // get the web engine
         WebEngine e = w.getEngine();
-        // load a website
         e.load("https://view.fis.agh.edu.pl/staff/gronek/");
 
         w.setPrefWidth(670);
